@@ -213,7 +213,11 @@ def load_billing_data(source, format_type=None, **db_params):
     # Ensure data types
     df['billing_amount'] = pd.to_numeric(df['billing_amount'], errors='coerce')
     df['merchant_id'] = df['merchant_id'].astype(str)
-    
+
+    # Drop rows with NaN in critical columns
+    df.dropna(subset=['merchant_id', 'month', 'billing_amount'], inplace=True)
+    df['month'] = df['month'].astype(int)  # Convert month to integer
+
     return df
 
 class Discrepancy:

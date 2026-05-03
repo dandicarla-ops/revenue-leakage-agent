@@ -1,0 +1,15 @@
+[
+  {
+    "merchant_id": "M001",
+    "merchant_name": "TechFlow Inc.",
+    "month": 1,
+    "shortfall": 37000.0,
+    "root_cause": "Ramp-up",
+    "pattern": "Single month anomaly",
+    "severity": "High",
+    "recommended_action": "Follow up with merchant/sales/legal",
+    "confidence": "Medium",
+    "reasoning": "A 74% shortfall in January for a SaaS merchant most likely reflects a new or recently onboarded merchant still ramping up transaction volume toward their USD 50,000 MMC, which typically takes 3-6 months in this industry. However, the absolute shortfall of USD 37,000 is material and warrants confirmation from the sales team that a ramp-up schedule is formally documented in the contract. An ASC 606 review is recommended to ensure any prepayments or minimum commitment true-up obligations are correctly deferred or recognized in the appropriate period.",
+    "asc606_flag": true
+  }
+]
